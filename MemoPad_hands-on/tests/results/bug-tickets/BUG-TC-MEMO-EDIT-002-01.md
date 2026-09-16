@@ -42,3 +42,20 @@ Medium
 
 ## 備考
 ラベル文言の重複、`for` 属性の紐付け、または編集画面内のフォーム要素のアクセシブルネームが意図通りか確認が必要。現在の `stderr.log` には本ケースの詳細スタックが出力されていないため、HTMLレポートまたは trace で追加確認する。
+
+## 対応内容
+
+- 対象ファイル: `tests/test-cases/viewpoint-table.spec.ts`
+- 編集画面での `タイトル` / `本文` 入力をフォーム内に限定した。
+  - 変更前: `page.getByLabel('タイトル')` / `page.getByLabel('本文')`
+  - 変更後: `const form = page.locator('form')` を使用し、`form.getByLabel('タイトル')` / `form.getByLabel('本文')`
+- 一覧画面側のフィルタや select と誤一致するリスクを下げ、編集フォームの入力欄だけを対象にした。
+
+## 対応後の確認
+
+```bash
+node node_modules\@playwright\test\cli.js test viewpoint-table.spec.ts --grep "TC-MEMO-EDIT-002-01|TC-TAG-CREATE-001-01|TC-USER-CREATE-001-01"
+```
+
+- 結果: passed
+- 判定: 再発防止としてテスト locator を修正済み
