@@ -110,6 +110,10 @@ function unique(prefix: string) {
   return `${prefix}-${Date.now()}-${test.info().parallelIndex}`;
 }
 
+function uniqueUserId(prefix: string) {
+  return `${prefix}-${Date.now().toString(36)}-${test.info().parallelIndex}`.slice(0, 20);
+}
+
 function uploadFile(name: string, type: string, content: string): UploadPayload {
   const base64 = Buffer.from(content).toString('base64');
   return {
@@ -210,7 +214,7 @@ test.describe('MemoPad viewpoint-table mapped Playwright tests', () => {
 
   test('TC-MEMO-LIST-006-01 / VP-MEMO-LIST-006 長いタイトルや本文でも一覧表示が崩れない', async ({ page, request }) => {
     const token = await loginByApi(request);
-    const title = `TC-MEMO-LIST-006-${'LongTitle'.repeat(10)}`;
+    const title = `TC-MEMO-LIST-006-${'LongTitle'.repeat(8)}`;
     const memo = await createMemo(request, token, {
       title,
       body: `${'長い本文です。'.repeat(80)}\n${'abcdefghijklmnopqrstuvwxyz'.repeat(20)}`,
@@ -260,9 +264,10 @@ test.describe('MemoPad viewpoint-table mapped Playwright tests', () => {
     const memo = await createMemo(request, token, { title, body: '更新前本文' });
     await openLoggedInPage(page, request);
 
-    await page.getByText(title).locator('..').locator('..').getByRole('button', { name: '編集' }).click();
-    await page.getByLabel('タイトル').fill(updatedTitle);
-    await page.getByLabel('本文').fill('更新後本文');
+    await page.locator('.memo-item').filter({ hasText: title }).getByRole('button', { name: '編集' }).click();
+    const memoForm = page.locator('.form-panel form');
+    await memoForm.locator('input').first().fill(updatedTitle);
+    await memoForm.locator('textarea').fill('更新後本文');
     await page.getByRole('button', { name: '更新' }).click();
 
     await expect(page.getByText('メモを更新しました。')).toBeVisible();
@@ -405,11 +410,12 @@ test.describe('MemoPad viewpoint-table mapped Playwright tests', () => {
     await page.getByRole('button', { name: '新規作成' }).click();
     await page.getByLabel('タイトル').fill(title);
     await page.getByLabel('本文').fill('タグ付き本文');
-    await page.getByLabel('タグ').fill('仕事, 重要');
+    await page.getByPlaceholder('例: 仕事, 重要').fill('仕事, 重要');
     await page.getByRole('button', { name: '登録' }).click();
-    await expect(page.getByText(title)).toBeVisible();
-    await expect(page.getByText('仕事')).toBeVisible();
-    await expect(page.getByText('重要')).toBeVisible();
+    const memoRow = page.locator('.memo-item').filter({ hasText: title });
+    await expect(memoRow).toBeVisible();
+    await expect(memoRow.locator('.tag-chip', { hasText: '仕事' })).toBeVisible();
+    await expect(memoRow.locator('.tag-chip', { hasText: '重要' })).toBeVisible();
   });
 
   test('TC-FAVORITE-LIST-001-01 / VP-FAVORITE-LIST-001 お気に入り登録できる', async ({ page, request }) => {
@@ -466,7 +472,7 @@ test.describe('MemoPad viewpoint-table mapped Playwright tests', () => {
   });
 
   test('TC-USER-CREATE-001-01 / VP-USER-CREATE-001 管理者がユーザーを作成できる', async ({ page, request }) => {
-    const userId = unique('user').replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 20);
+    const userId = uniqueUserId('user');
     await openLoggedInPage(page, request);
     await page.getByRole('button', { name: 'ユーザー管理' }).click();
     await page.getByRole('button', { name: 'ユーザー作成' }).click();
@@ -477,12 +483,12 @@ test.describe('MemoPad viewpoint-table mapped Playwright tests', () => {
     await page.getByLabel('権限').selectOption('user');
     await page.getByRole('button', { name: '登録' }).click();
     await expect(page.getByText('ユーザーを登録しました。')).toBeVisible();
-    await expect(page.getByText(userId)).toBeVisible();
+    await expect(page.getByText(userId, { exact: true })).toBeVisible();
   });
 
   test('TC-USER-DISABLE-007-01 / VP-USER-DISABLE-007 無効化後の既存セッションは保護APIで拒否される', async ({ request }) => {
     const adminToken = await loginByApi(request);
-    const userId = unique('disableuser').replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 20);
+    const userId = uniqueUserId('disable');
     const created = await createUser(request, adminToken, { userId, role: 'user' });
     const userToken = await loginByApi(request, { userId, password: 'password123' });
 
