@@ -1,0 +1,1481 @@
+{
+  "config": {
+    "argv": [
+      "C:\\nvm4w\\nodejs\\node.exe",
+      "C:\\ai-Coding-traning\\MemoPad_hands-on\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--ui"
+    ],
+    "configFile": "C:\\ai-Coding-traning\\MemoPad_hands-on\\playwright.config.ts",
+    "rootDir": "C:/ai-Coding-traning/MemoPad_hands-on/tests/test-cases",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/ai-Coding-traning/MemoPad_hands-on/tests/results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/ai-Coding-traning/MemoPad_hands-on/tests/test-cases",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "tests/results/html-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tests/results/results.json"
+        }
+      ],
+      [
+        "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\helpers\\file-log-reporter.ts",
+        {
+          "stdoutFile": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\logs\\viewpoint-table.stdout.log",
+          "stderrFile": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\logs\\viewpoint-table.stderr.log"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:5173",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "viewpoint-table.spec.ts",
+      "file": "viewpoint-table.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MemoPad viewpoint-table mapped Playwright tests",
+          "file": "viewpoint-table.spec.ts",
+          "line": 123,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-LOGIN-001-01 / VP-LOGIN-001 正しいユーザーID・パスワードでログインできる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1036,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:49.747Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-c4870-001-正しいユーザーID・パスワードでログインできる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-1ef5004f3d0849b7acf3",
+              "file": "viewpoint-table.spec.ts",
+              "line": 134,
+              "column": 7
+            },
+            {
+              "title": "TC-LOGIN-003-01 / VP-LOGIN-003 誤った認証情報でログインできない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 722,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:51.092Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-a89bd--LOGIN-003-誤った認証情報でログインできない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-a0400bb9b6f1d0299bc6",
+              "file": "viewpoint-table.spec.ts",
+              "line": 139,
+              "column": 7
+            },
+            {
+              "title": "TC-LOGIN-005-01 / VP-LOGIN-005 ユーザーID未入力時に入力エラーを表示する",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 819,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:51.943Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-171a1-N-005-ユーザーID未入力時に入力エラーを表示する-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-5568aa76b8a6c1e3cc45",
+              "file": "viewpoint-table.spec.ts",
+              "line": 147,
+              "column": 7
+            },
+            {
+              "title": "TC-LOGOUT-001-01 / VP-LOGOUT-001 ログアウトできる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1025,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:52.988Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-02468-1-01-VP-LOGOUT-001-ログアウトできる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-115e5164195c400fbe99",
+              "file": "viewpoint-table.spec.ts",
+              "line": 155,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-CREATE-001-01 / VP-MEMO-CREATE-001 タイトルと本文を入力してメモを登録できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1460,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:54.260Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-6a781-TE-001-タイトルと本文を入力してメモを登録できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-2b16441b26c4fd15adc5",
+              "file": "viewpoint-table.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-CREATE-004-01 / VP-MEMO-CREATE-004 タイトル100文字ちょうどで登録できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1367,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:55.996Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-5c24b-ATE-004-タイトル100文字ちょうどで登録できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-86c595d91d3325723db0",
+              "file": "viewpoint-table.spec.ts",
+              "line": 174,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-CREATE-005-01 / VP-MEMO-CREATE-005 タイトル101文字で登録できない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1419,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:57.627Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-8fbda-CREATE-005-タイトル101文字で登録できない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-269fa16082c4d6177872",
+              "file": "viewpoint-table.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-CREATE-007-01 / VP-MEMO-CREATE-007 本文2001文字で登録できない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1311,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:15:59.304Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-ec8b8--CREATE-007-本文2001文字で登録できない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-6b5345dec262a821963e",
+              "file": "viewpoint-table.spec.ts",
+              "line": 193,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-CREATE-008-01 / VP-MEMO-CREATE-008 タイトル未入力時に登録できない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1355,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:00.902Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-d0540--CREATE-008-タイトル未入力時に登録できない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-deb9c09753e0cb65b212",
+              "file": "viewpoint-table.spec.ts",
+              "line": 202,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-LIST-006-01 / VP-MEMO-LIST-006 長いタイトルや本文でも一覧表示が崩れない",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 272,
+                      "error": {
+                        "message": "Error: create memo API status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m400\u001b[39m",
+                        "stack": "Error: create memo API status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m400\u001b[39m\n    at createMemo (C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:64:55)\n    at C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:214:18",
+                        "location": {
+                          "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                          "column": 55,
+                          "line": 64
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 62 |\u001b[39m     }\u001b[33m,\u001b[39m\n \u001b[90m 63 |\u001b[39m   })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m   expect(response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m \u001b[32m'create memo API status'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m201\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m }\n \u001b[90m 67 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                            "column": 55,
+                            "line": 64
+                          },
+                          "message": "Error: create memo API status\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m400\u001b[39m\n\n\u001b[0m \u001b[90m 62 |\u001b[39m     }\u001b[33m,\u001b[39m\n \u001b[90m 63 |\u001b[39m   })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m   expect(response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m \u001b[32m'create memo API status'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m201\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m }\n \u001b[90m 67 |\u001b[39m\u001b[0m\n\u001b[2m    at createMemo (C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:64:55)\u001b[22m\n\u001b[2m    at C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:214:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:02.517Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-449ab-ST-006-長いタイトルや本文でも一覧表示が崩れない-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-449ab-ST-006-長いタイトルや本文でも一覧表示が崩れない-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                        "column": 55,
+                        "line": 64
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-c590efa9d03426914a9b",
+              "file": "viewpoint-table.spec.ts",
+              "line": 211,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-DETAIL-001-01 / VP-MEMO-DETAIL-001 メモ詳細にタイトル・本文・日時を表示する",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1169,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:03.553Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-b7bc8-IL-001-メモ詳細にタイトル・本文・日時を表示する-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-c934f38cbad17d6d9b63",
+              "file": "viewpoint-table.spec.ts",
+              "line": 233,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-DETAIL-003-01 / VP-MEMO-DETAIL-003 存在しないメモIDは404を返す",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 200,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:05.020Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-86b26-DETAIL-003-存在しないメモIDは404を返す-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-3af29cd20e93e09f1275",
+              "file": "viewpoint-table.spec.ts",
+              "line": 248,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-EDIT-002-01 / VP-MEMO-EDIT-002 タイトルと本文を更新できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1363,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:05.261Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-674af-MEMO-EDIT-002-タイトルと本文を更新できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-64519c357a98a241ade5",
+              "file": "viewpoint-table.spec.ts",
+              "line": 256,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-DELETE-003-01 / VP-MEMO-DELETE-003 メモを削除すると一覧に表示されない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1309,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:06.905Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-4489f-ELETE-003-メモを削除すると一覧に表示されない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-211c94734c7698d10bd7",
+              "file": "viewpoint-table.spec.ts",
+              "line": 280,
+              "column": 7
+            },
+            {
+              "title": "TC-MEMO-DELETE-005-01 / VP-MEMO-DELETE-005 削除キャンセル時にメモが削除されない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1315,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:08.476Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-9c349-LETE-005-削除キャンセル時にメモが削除されない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-0c9e751bbd164464c841",
+              "file": "viewpoint-table.spec.ts",
+              "line": 297,
+              "column": 7
+            },
+            {
+              "title": "TC-SEARCH-001-01 / VP-SEARCH-001 タイトルの部分一致検索ができる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1290,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:10.047Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-61fb9--SEARCH-001-タイトルの部分一致検索ができる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-e4b9d3521eb04055bcd9",
+              "file": "viewpoint-table.spec.ts",
+              "line": 315,
+              "column": 7
+            },
+            {
+              "title": "TC-SEARCH-005-01 / VP-SEARCH-005 検索結果0件時の表示を確認する",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1169,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:11.603Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-b4e2c--SEARCH-005-検索結果0件時の表示を確認する-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-df2ce374acabf1e35aaf",
+              "file": "viewpoint-table.spec.ts",
+              "line": 330,
+              "column": 7
+            },
+            {
+              "title": "TC-PAGING-004-01 / VP-PAGING-004 メモ11件時に2ページ目へ移動できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1828,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:13.021Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-989c5-GING-004-メモ11件時に2ページ目へ移動できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-53bed0177396a56615c9",
+              "file": "viewpoint-table.spec.ts",
+              "line": 336,
+              "column": 7
+            },
+            {
+              "title": "TC-REFRESH-FILTER-001-01 / VP-REFRESH-FILTER-001 リフレッシュ後は一覧条件が初期状態に戻る",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2492,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:15.165Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-bfef8-ER-001-リフレッシュ後は一覧条件が初期状態に戻る-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-5ce1c194b915466153b0",
+              "file": "viewpoint-table.spec.ts",
+              "line": 353,
+              "column": 7
+            },
+            {
+              "title": "TC-SORT-003-01 / VP-SORT-003 タイトルで並び替えできる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1456,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:17.983Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-a6a45-01-VP-SORT-003-タイトルで並び替えできる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-49bbef542aafea2b9573",
+              "file": "viewpoint-table.spec.ts",
+              "line": 385,
+              "column": 7
+            },
+            {
+              "title": "TC-TAG-CREATE-001-01 / VP-TAG-CREATE-001 タグ付きメモを登録できる",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1288,
+                      "error": {
+                        "message": "Error: locator.fill: Error: strict mode violation: getByLabel('タグ') resolved to 2 elements:\n    1) <textarea rows=\"12\" maxlength=\"2100\">タグ付き本文</textarea> aka getByRole('textbox', { name: '本文 6/' })\n    2) <input value=\"\" placeholder=\"例: 仕事, 重要\"/> aka getByRole('textbox', { name: 'タグ カンマ区切り、最大10個、各30文字以内' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('タグ')\u001b[22m\n",
+                        "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('タグ') resolved to 2 elements:\n    1) <textarea rows=\"12\" maxlength=\"2100\">タグ付き本文</textarea> aka getByRole('textbox', { name: '本文 6/' })\n    2) <input value=\"\" placeholder=\"例: 仕事, 重要\"/> aka getByRole('textbox', { name: 'タグ カンマ区切り、最大10個、各30文字以内' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('タグ')\u001b[22m\n\n    at C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:408:33",
+                        "location": {
+                          "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                          "column": 33,
+                          "line": 408
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 406 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'タイトル'\u001b[39m)\u001b[33m.\u001b[39mfill(title)\u001b[33m;\u001b[39m\n \u001b[90m 407 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'本文'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'タグ付き本文'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 408 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'タグ'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'仕事, 重要'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 409 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'登録'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 410 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(title))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 411 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'仕事'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                            "column": 33,
+                            "line": 408
+                          },
+                          "message": "Error: locator.fill: Error: strict mode violation: getByLabel('タグ') resolved to 2 elements:\n    1) <textarea rows=\"12\" maxlength=\"2100\">タグ付き本文</textarea> aka getByRole('textbox', { name: '本文 6/' })\n    2) <input value=\"\" placeholder=\"例: 仕事, 重要\"/> aka getByRole('textbox', { name: 'タグ カンマ区切り、最大10個、各30文字以内' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('タグ')\u001b[22m\n\n\n\u001b[0m \u001b[90m 406 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'タイトル'\u001b[39m)\u001b[33m.\u001b[39mfill(title)\u001b[33m;\u001b[39m\n \u001b[90m 407 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'本文'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'タグ付き本文'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 408 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'タグ'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'仕事, 重要'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 409 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'登録'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 410 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(title))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 411 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'仕事'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:408:33\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:19.715Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-a09f5-TAG-CREATE-001-タグ付きメモを登録できる-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-a09f5-TAG-CREATE-001-タグ付きメモを登録できる-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                        "column": 33,
+                        "line": 408
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-c47a2faf5642be3e98e9",
+              "file": "viewpoint-table.spec.ts",
+              "line": 402,
+              "column": 7
+            },
+            {
+              "title": "TC-FAVORITE-LIST-001-01 / VP-FAVORITE-LIST-001 お気に入り登録できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1282,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:22.039Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-fae32-AVORITE-LIST-001-お気に入り登録できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-a589ea370710a57ec6dc",
+              "file": "viewpoint-table.spec.ts",
+              "line": 415,
+              "column": 7
+            },
+            {
+              "title": "TC-ATTACHMENT-CREATE-001-01 / VP-ATTACHMENT-CREATE-001 添付ファイル付きメモを登録できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 230,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:23.621Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-a2f49-CREATE-001-添付ファイル付きメモを登録できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-8c1ec7905dd5bea89aed",
+              "file": "viewpoint-table.spec.ts",
+              "line": 428,
+              "column": 7
+            },
+            {
+              "title": "TC-IMAGE-CREATE-001-01 / VP-IMAGE-CREATE-001 画像付きメモを登録できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 225,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:23.887Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-b0bf4-AGE-CREATE-001-画像付きメモを登録できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-9263258b405754c47648",
+              "file": "viewpoint-table.spec.ts",
+              "line": 444,
+              "column": 7
+            },
+            {
+              "title": "TC-USER-LIST-001-01 / VP-USER-LIST-001 管理者がユーザー一覧を表示できる",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1139,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:24.151Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-72ceb-R-LIST-001-管理者がユーザー一覧を表示できる-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-8becee446eb375c23f94",
+              "file": "viewpoint-table.spec.ts",
+              "line": 460,
+              "column": 7
+            },
+            {
+              "title": "TC-USER-CREATE-001-01 / VP-USER-CREATE-001 管理者がユーザーを作成できる",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1769,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('user-1789445785642-0')\nExpected: visible\nError: strict mode violation: getByText('user-1789445785642-0') resolved to 3 elements:\n    1) <span>user-1789445785642-0</span> aka getByText('user-1789445785642-0', { exact: true })\n    2) <span>表示名 user-1789445785642-0</span> aka getByText('表示名 user-1789445785642-')\n    3) <span>user-1789445785642-0@example.test</span> aka getByText('user-1789445785642-0@example.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('user-1789445785642-0') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('user-1789445785642-0')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('user-1789445785642-0')\nExpected: visible\nError: strict mode violation: getByText('user-1789445785642-0') resolved to 3 elements:\n    1) <span>user-1789445785642-0</span> aka getByText('user-1789445785642-0', { exact: true })\n    2) <span>表示名 user-1789445785642-0</span> aka getByText('表示名 user-1789445785642-')\n    3) <span>user-1789445785642-0@example.test</span> aka getByText('user-1789445785642-0@example.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('user-1789445785642-0') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('user-1789445785642-0')\u001b[22m\n\n    at C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:480:42",
+                        "location": {
+                          "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                          "column": 42,
+                          "line": 480
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 478 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'登録'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 479 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'ユーザーを登録しました。'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 480 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(userId))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 481 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 482 |\u001b[39m\n \u001b[90m 483 |\u001b[39m   test(\u001b[32m'TC-USER-DISABLE-007-01 / VP-USER-DISABLE-007 無効化後の既存セッションは保護APIで拒否される'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                            "column": 42,
+                            "line": 480
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('user-1789445785642-0')\nExpected: visible\nError: strict mode violation: getByText('user-1789445785642-0') resolved to 3 elements:\n    1) <span>user-1789445785642-0</span> aka getByText('user-1789445785642-0', { exact: true })\n    2) <span>表示名 user-1789445785642-0</span> aka getByText('表示名 user-1789445785642-')\n    3) <span>user-1789445785642-0@example.test</span> aka getByText('user-1789445785642-0@example.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('user-1789445785642-0') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('user-1789445785642-0')\u001b[22m\n\n\n\u001b[0m \u001b[90m 478 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'登録'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 479 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'ユーザーを登録しました。'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 480 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(userId))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 481 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 482 |\u001b[39m\n \u001b[90m 483 |\u001b[39m   test(\u001b[32m'TC-USER-DISABLE-007-01 / VP-USER-DISABLE-007 無効化後の既存セッションは保護APIで拒否される'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts:480:42\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:25.544Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-87650-R-CREATE-001-管理者がユーザーを作成できる-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-87650-R-CREATE-001-管理者がユーザーを作成できる-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\test-cases\\viewpoint-table.spec.ts",
+                        "column": 42,
+                        "line": 480
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-3d64ac609ba1adcf69a1",
+              "file": "viewpoint-table.spec.ts",
+              "line": 468,
+              "column": 7
+            },
+            {
+              "title": "TC-USER-DISABLE-007-01 / VP-USER-DISABLE-007 無効化後の既存セッションは保護APIで拒否される",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 362,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:28.275Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-ca670-07-無効化後の既存セッションは保護APIで拒否される-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-d69c4514dc4aac5ed02d",
+              "file": "viewpoint-table.spec.ts",
+              "line": 483,
+              "column": 7
+            },
+            {
+              "title": "TC-COMMON-API-001-01 / VP-COMMON-API-001 未認証時に401を返す",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 182,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:28.820Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-a8959--COMMON-API-001-未認証時に401を返す-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-2b32726cf79813d61645",
+              "file": "viewpoint-table.spec.ts",
+              "line": 496,
+              "column": 7
+            },
+            {
+              "title": "TC-COMMON-UI-001-01 / VP-COMMON-UI-001 サーバーエラー時に指定メッセージを表示する",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1171,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:29.049Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-ce84e-I-001-サーバーエラー時に指定メッセージを表示する-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-0aa3ade33aa14e2d38ac",
+              "file": "viewpoint-table.spec.ts",
+              "line": 501,
+              "column": 7
+            },
+            {
+              "title": "TC-COMMON-UI-002-01 / VP-COMMON-UI-002 通信エラー時に指定メッセージを表示する",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1376,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:30.363Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-4bcd6--UI-002-通信エラー時に指定メッセージを表示する-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-9cf760118860ece94828",
+              "file": "viewpoint-table.spec.ts",
+              "line": 518,
+              "column": 7
+            },
+            {
+              "title": "TC-COMMON-API-006-01 / VP-COMMON-API-006 サーバーエラー時に500を返す",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 265,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:32.000Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-34b15-MON-API-006-サーバーエラー時に500を返す-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-5bcdfae229eaf1419535",
+              "file": "viewpoint-table.spec.ts",
+              "line": 528,
+              "column": 7
+            },
+            {
+              "title": "TC-COMMON-SECURITY-002-01 / VP-COMMON-SECURITY-002 APIレスポンスにパスワード情報を含めない",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 258,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-15T04:16:32.322Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\ai-Coding-traning\\MemoPad_hands-on\\tests\\results\\artifacts\\viewpoint-table-MemoPad-vi-b4e9b-Y-002-APIレスポンスにパスワード情報を含めない-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2d4189ceb53cc48898-6359ff04ac5600fef157",
+              "file": "viewpoint-table.spec.ts",
+              "line": 540,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-15T04:15:48.744Z",
+    "duration": 44041.476999999955,
+    "expected": 29,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
