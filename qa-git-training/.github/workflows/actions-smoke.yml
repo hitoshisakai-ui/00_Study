@@ -1,0 +1,19 @@
+name: Actions smoke check
+
+on:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Confirm runner
+        run: node --version
