@@ -2,7 +2,11 @@ name: Node test
 
 on:
   pull_request:
+   branches:
+      - master
 
+ branches:
+      - qa/add-ci-training
 jobs:
   test:
     runs-on: ubuntu-latest
