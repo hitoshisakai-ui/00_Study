@@ -40,6 +40,15 @@ jobs:
       - name: Check environment variable
         run: echo "Environment is $TRAINING_ENV"
 
+      - name: Check secret exists
+        env:
+          TRAINING_SECRET: ${{ secrets.TRAINING_SECRET }}
+        run: |
+          if [ -z "$TRAINING_SECRET" ]; then
+            echo "Secret is missing"
+            exit 1
+          fi
+          echo "Secret is configured"
 
 
 
