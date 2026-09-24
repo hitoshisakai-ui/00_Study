@@ -9,6 +9,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+    TRAINING_ENV: ci-training
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -33,6 +35,11 @@ jobs:
         with:
           name: test-result
           path: test-result.txt
+          
+      - name: Check environment variable
+        run: echo "Environment is $TRAINING_ENV"
+
+
 
 
 
