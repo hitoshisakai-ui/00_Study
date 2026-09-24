@@ -45,3 +45,20 @@ High
 
 ## 備考
 ユーザー作成APIのバリデーション、テストデータの一意性、または既存データとの衝突を確認する。現在の `stderr.log` には本ケースの詳細スタックが出力されていないため、HTMLレポートまたは trace で追加確認する。
+
+## 対応内容
+
+- 対象ファイル: `tests/test-cases/viewpoint-table.spec.ts`
+- 無効化テスト用のユーザーID生成を、20文字以内かつ衝突しにくい形式に変更した。
+  - 変更前: `unique('disableuser').replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 20)`
+  - 変更後: `` `du-${Date.now().toString(36)}-${test.info().parallelIndex}`.slice(0, 20) ``
+- 20文字制限で末尾が切られても一意性が残りやすい短い接頭辞にした。
+
+## 対応後の確認
+
+```bash
+node node_modules\@playwright\test\cli.js test viewpoint-table.spec.ts --grep TC-USER-DISABLE-007-01
+```
+
+- 結果: passed
+- 判定: テストデータ生成不備の予防修正として対応済み

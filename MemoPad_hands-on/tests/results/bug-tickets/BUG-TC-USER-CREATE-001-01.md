@@ -50,3 +50,20 @@ Low
 
 ## 備考
 アプリ本体の不具合というより、テスト locator が曖昧な可能性が高い。ユーザーID列や行単位に locator を絞る、または exact match を利用するなどの見直しが必要。
+
+## 対応内容
+
+- 対象ファイル: `tests/test-cases/viewpoint-table.spec.ts`
+- 作成ユーザーIDの表示確認を完全一致に変更した。
+  - 変更前: `await expect(page.getByText(userId)).toBeVisible();`
+  - 変更後: `await expect(page.getByText(userId, { exact: true })).toBeVisible();`
+- ユーザーIDが表示名やメールアドレスにも部分一致し、複数要素に一致する問題を回避した。
+
+## 対応後の確認
+
+```bash
+node node_modules\@playwright\test\cli.js test viewpoint-table.spec.ts --grep "TC-MEMO-EDIT-002-01|TC-TAG-CREATE-001-01|TC-USER-CREATE-001-01"
+```
+
+- 結果: passed
+- 判定: テスト locator 不備として修正済み

@@ -47,3 +47,21 @@ Medium
 
 ## 備考
 本文ラベルやタグラベルのアクセシブルネームが重複・部分一致している可能性がある。タグ入力欄を一意に識別できるラベル、`id` / `for`、またはテスト側 locator の見直しが必要。
+
+## 対応内容
+
+- 対象ファイル: `tests/test-cases/viewpoint-table.spec.ts`
+- タグ入力の locator をフォーム内に限定した。
+  - 変更前: `page.getByLabel('タグ').fill('仕事, 重要')`
+  - 変更後: `const form = page.locator('form')` を使用し、`form.getByRole('textbox', { name: /^タグ/ }).fill('仕事, 重要')`
+- タグ登録後の確認も、ページ全体の `getByText('仕事')` / `getByText('重要')` ではなく、作成したメモ行内の `.tag-chip` に限定した。
+- これにより、一覧フィルタのタグ `select` や過去データのタグ表示との strict mode violation を回避した。
+
+## 対応後の確認
+
+```bash
+node node_modules\@playwright\test\cli.js test viewpoint-table.spec.ts --grep TC-TAG-CREATE-001-01
+```
+
+- 結果: passed
+- 判定: テスト locator 不備として修正済み

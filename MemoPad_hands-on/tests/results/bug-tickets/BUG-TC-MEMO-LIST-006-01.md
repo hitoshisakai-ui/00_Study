@@ -48,3 +48,23 @@ Medium
 
 ## 備考
 長文入力に対するAPIバリデーション、またはテストデータの本文長が仕様上限を超過していないか確認が必要。
+
+## 対応内容
+
+- 対象ファイル: `tests/test-cases/viewpoint-table.spec.ts`
+- タイトル生成を仕様上限100文字以内に収めるよう変更した。
+  - 変更前: `TC-MEMO-LIST-006-${'LongTitle'.repeat(10)}` は108文字となり、APIバリデーションで `400 Bad Request` になる。
+  - 変更後: `TC-MEMO-LIST-006-${Date.now().toString(36)}-${'LongTitle'.repeat(8)}` とし、100文字以内かつ実行ごとに一意な値にした。
+- 検索語を固定プレフィックスではなく作成したタイトル全体に変更し、過去実行で残った同名データと衝突しないようにした。
+- 一覧表示確認をページ全体の `getByText(title)` ではなく、対象メモ行 `.memo-item` に限定した。
+- テスト失敗時にも作成メモを削除できるよう、削除処理を `finally` に移動した。
+- `toHaveScreenshot` 用の基準画像を追加した。
+
+## 対応後の確認
+
+```bash
+node node_modules\@playwright\test\cli.js test viewpoint-table.spec.ts --grep TC-MEMO-LIST-006-01
+```
+
+- 結果: passed
+- 判定: テストコード不備として修正済み
