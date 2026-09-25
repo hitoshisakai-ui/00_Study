@@ -1,0 +1,54 @@
+name: Final CI practice
+
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      FINAL_ENV: practice 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        shell: bash
+        run: |
+          set -o pipefail
+          npm test 2>&1 | tee test-result.txt
+
+      - name: Upload test result
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-result
+          path: test-result.txt
+          
+      - name: Check environment variable
+        run: echo "Environment is $FINAL_ENV"
+
+      - name: Check secret exists
+        env:
+          TRAINING_SECRET: ${{ secrets.TRAINING_SECRET }}
+        run: |
+          if [ -z "$TRAINING_SECRET" ]; then
+            echo "Secret is missing"
+            exit 1
+          fi
+          echo "Secret is configured"
+
+
+
+
+
+
